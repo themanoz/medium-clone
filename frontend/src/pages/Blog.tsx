@@ -13,10 +13,10 @@ export const Blog = () => {
     return <div>
       <AppBar />
       <div className="h-screen flex justify-center flex-col">
-      <div className="flex justify-center">
-        <Spinner />
+        <div className="flex justify-center">
+          <Spinner />
+        </div>
       </div>
-    </div>;
     </div>
   }
   return (
