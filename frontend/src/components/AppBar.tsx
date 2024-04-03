@@ -17,18 +17,35 @@ function AppBar() {
         <Link to={"/blogs"}>Medium</Link>
       </div>
       <div>
-        <Link to={'/publish'}>
-        <button type="button" className="focus:outline-none text-white bg-green-700 focus:ring-4 focus:ring-green-300 
-          font-medium rounded-full text-sm px-5 py-2.5 me-2 mb-2">
-          New
-        </button>
-        </Link>
-        <Avatar name="Manoj Kumar" />
-        {token && ( 
-          <button onClick={handleLogout} className="focus:outline-none text-white bg-red-700 focus:ring-4 focus:ring-red-300 
-            font-medium rounded-full text-sm px-5 py-2.5 me-2 mb-2">
-            Logout
-          </button>
+        {token ? (
+          <>
+            <Link to={"/publish"}>
+              <button
+                type="button"
+                className="focus:outline-none text-white bg-green-700 focus:ring-4 focus:ring-green-300 
+              font-medium rounded-full text-sm px-5 py-2.5 me-2 mb-2"
+              >
+                New
+              </button>
+            </Link>
+            <Avatar name="Manoj Kumar" />
+            <button
+              onClick={handleLogout}
+              className="focus:outline-none text-white bg-red-700 focus:ring-4 focus:ring-red-300 
+                font-medium rounded-full text-sm px-5 py-2.5 me-2 mb-2"
+            >
+              Logout
+            </button>
+          </>
+        ) : (
+          <Link to={"/signup"}>
+            <button
+              className="focus:outline-none text-white bg-green-700 focus:ring-4 focus:ring-green-300 
+              font-medium rounded-full text-sm px-5 py-2.5 me-2 mb-2"
+            >
+              Get Started
+            </button>
+          </Link>
         )}
       </div>
     </div>
