@@ -19,10 +19,10 @@ const navigate = useNavigate();
 
 useEffect(() => {
     const token = localStorage.getItem("token");
-    // if(!token) {
-    //     navigate("/signup");
-    //     return;
-    // }
+    if(!token) {
+        navigate("/signup");
+        return;
+    }
 
     axios.get(`${BACKEND_URL}/api/v1/blog/bulk`,{
         headers: {
