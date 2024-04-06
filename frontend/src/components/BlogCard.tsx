@@ -38,7 +38,7 @@ function BlogCard({
           {content.slice(0, 100) + "..."}
         </div>
         <div className="text-slate-400 text-sm font-normal pt-2">
-          {`${Math.ceil(content.length / 100)} min read`}
+        {`${Math.ceil(content.length / 100)} min read`}
         </div>
       </div>
     </Link>
